@@ -1,0 +1,57 @@
+@import 'color';
+.m1{
+    width: 100%;
+    background-color: white;
+}
+.productCard{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid gray;
+    > div >img {
+        padding-top: 1rem;
+        filter: drop-shadow(10px 10px 20px black);
+    }
+    >div >p:first-child{
+        padding-top: 1rem;
+        font-family: $text2;
+        font-weight: bold;
+        font-size: 22px;
+        color: maroon;
+    }
+    >div>p:nth-child(2){
+        font-family: $text1;
+        font-weight: bold;
+        font-size: 18px;
+        color: orange;
+        width: 50%;
+    }
+    >div>h4{
+        font-family: $text2;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 2rem;
+    }
+    >.nm{
+        text-align: end;
+        padding-top: 3rem;
+        >button{
+             width: 150%;
+             color: maroon;
+             font-family: $text2;
+             font-weight: bold;
+             font-size: 15px;
+             background-color: orange;
+             box-shadow: 10px 10px 20px black;
+             border-radius: 50px 30px 50px 30px;
+             &:hover{
+                background-color:darkred;
+                color: wheat;
+             }
+        }
+    }
+    &:hover{
+        transition: all ease (350ms);
+        transform: scale(1.03);
+    }
+}

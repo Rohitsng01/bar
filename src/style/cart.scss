@@ -1,0 +1,23 @@
+@import 'color';
+.cart{
+    width: 100%;
+    background-color: white;
+}
+.cartItem{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    font-family: $text2;
+    font-weight: 890;
+    
+div>button>p{
+    display: flex;
+}
+    >.a1>img{
+        box-shadow: 10px 10px 10px black;
+        border-radius: 10px 10px 10px 10px;
+}
+}
+aside{
+    text-align: end;
+}

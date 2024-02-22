@@ -1,0 +1,64 @@
+@import 'color';
+
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem;
+
+    >div {
+
+        > h1{
+           width: 100%;
+            font-family: $text2;
+            font-size: 25px;
+            display: flex;
+            justify-content: flex-end;
+         }
+
+         >p{
+            font-family: $text1;
+            font-size: 19px;
+            font-weight: bold;
+            
+
+         } .p{  
+           font-family: $text2;
+            font-size: 19px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            svg{
+               margin: 0.5rem;
+               cursor: pointer;
+               
+            }
+         }
+    }
+
+
+
+
+ main {
+   width: 100%;
+    font-family: $text1;
+    display: flex;
+    justify-content:space-between;
+    
+    > a {
+      
+       color: black;
+       margin: 1rem;
+       font-weight: bold;
+       &:hover{
+           color: red;
+       }
+    }
+               
+       }
+
+}
