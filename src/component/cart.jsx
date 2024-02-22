@@ -11,19 +11,30 @@ import img8 from '../img/chowmin.jpg';
 import img9 from '../img/ChickenChowmein.jpg';
 import img10 from '../img/eggchow.webp';
 import img11 from '../img/egg.jpg';
+import { useSelector } from 'react-redux';
 
 
-function Cart() {
+const Cart = () => {
+
+  const {CartItems} = useSelector(state => state.Cart)
   return (
     <div className='cart'>
-      <main><CartItem
-
-      imgsrc = {img1}
-      name = {"Momos"}
-       price = {150}
-       qty = {1}
-      id ={"uqwhduuh"}
-      /> </main>
+      <main>
+        {
+          CartItems.length > 0 ? (
+            CartItems.map(i=>(
+              <CartItem
+              imgsrc = {img1}
+              name = {"Momos"}
+               price = {150}
+               qty = {1}
+              id ={"uqwhduuh"} />
+             
+            ))
+          ): <h1>No items Yet</h1>
+            }
+        
+         </main>
 
      <aside>
       <h2>Subtotal : <img  src='assets/img/rup.svg'/>{2000}</h2>
