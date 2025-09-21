@@ -7,3 +7,27 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
+
+html, body {
+  background: #ffffff;
+  color: #2c3e50;
+}
+
+.dark html,
+.dark body,
+.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Dark mode component tweaks */
+.dark .header-container {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.dark .nav-link { color: #e2e8f0; }
+.dark .nav-link:hover { background: rgba(148, 163, 184, 0.15); color: #93c5fd; }
+.dark .action-link { color: #e2e8f0; background: rgba(148, 163, 184, 0.12); }
+.dark .action-link:hover { background: linear-gradient(135deg, #334155 0%, #0ea5e9 100%); }
+.dark .hamburger { color: #e2e8f0; }

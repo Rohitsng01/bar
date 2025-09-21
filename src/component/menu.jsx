@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/reducer'
 
 import img1 from '../img/momos1.jpg';
 import img2 from '../img/chicken.jpg';
@@ -20,6 +22,7 @@ import toast from 'react-hot-toast';
 
 
 function Menu() {
+    const dispatch = useDispatch()
 
     const ProductList = [
         {
@@ -101,7 +104,7 @@ function Menu() {
         },
     ];
     const addToCartHandler = (options) => {
-        console.log(options)
+        dispatch(addToCart(options))
         toast.success("Added To Cart")
     }
     return (
@@ -131,7 +134,7 @@ const ProductCard = ({name, id, price, handler,title, imgsrc}) => (
         <p>{name}</p>
         <p>{title}</p> </div>
         <div>
-        <h4> <img  src='assets/img/rup.svg'/>{price}</h4> </div>
+        <h4>₹{price}</h4> </div>
         <div className='nm'>
         <button onClick={() => handler({ price, name, id, quantity: 1, imgsrc })} >Add To Cart</button>
         </div>

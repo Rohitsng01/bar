@@ -1,108 +1,294 @@
 @import 'color';
 
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 
-.login{
-    width: 100%;
-    background-color:lightblue;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    >.user{
-       box-shadow: 10px 10px 20px black ;  
-        margin: 2rem;
-        height: 50vh;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 30rem;
-        border-radius: 50px 100px 20px 100px;
-        
-        background-color: rgba(0,0,0,0.4);
-        
-
-        > div >h1{
-            font-family: $text2;
-            font-weight: bold;
-            >span{
-                color: red;
-            }
-        }
-    > .int{
-        display: grid;
-        justify-content: center;
-        font-family: $text2;
-        gap: 1rem;
-        margin-top: -2rem;
-        >label{
-            display: flex;
-            justify-content: space-between;
-            >input{
-                border-radius: 50px 100px 50px 100px;
-            }
-        }
-    } 
-    }
-    .bt{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: -2rem;
-        > button{
-            
-            font-family: $text2;
-            font-weight: bold;
-            font-size: 20px;
-            justify-content: space-around;
-
-            letter-spacing: 0.3rem;
-            width: 50%;
-            border-radius: 50px 100px 50px 100px;
-            background-color:rgb(39, 39, 242);
-            border: 2px solid rgb(23, 138, 232);
-            color: white;
-            &:hover{
-                background-color: black;
-                color: white;
-                border: 2px solid red; 
-            }
-            
-
-        }
-
-    }
-    .nri > span{
-        display: flex;
-        justify-content: flex-end;
-        text-align: end;
-        font-family: $text2;
-        font-weight: bold;
-        font-size: 15px;
-        margin: 0.5rem;
-        color: black;
-
-    }
-    .bt1{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: -1rem;
-        text-decoration: none;
-        > a{
-            
-            font-family: $text2;
-            font-weight: bold;
-            font-size: 20px;
-            width: 50%;
-            border: 2px solid rgb(23, 138, 232);
-            border-radius: 100px 50px 100px 50px;
-            background-color:rgb(39, 39, 242);
-            color: white;
-            &:hover{
-                background-color: black;
-                color: white;
-                border: 2px solid red;
-            }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0.05"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/></svg>');
+    opacity: 0.3;
+  }
 }
+
+.login-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 1rem;
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  .login-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  }
+
+  h1 {
+    font-family: $text2;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-family: $text1;
+    color: #6c757d;
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.login-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: $text2;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+
+      svg {
+        color: #667eea;
+        font-size: 1rem;
+      }
     }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      font-family: $text1;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+
+      &:focus {
+        outline: none;
+        border-color: #667eea;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      &.error {
+        border-color: #e74c3c;
+        background: #fdf2f2;
+      }
+
+      &::placeholder {
+        color: #adb5bd;
+      }
+    }
+
+    .password-input-container {
+      position: relative;
+
+      .password-toggle {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #6c757d;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #667eea;
+          background: rgba(102, 126, 234, 0.1);
+        }
+      }
+    }
+
+    .error-message {
+      color: #e74c3c;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      display: block;
+      font-family: $text1;
+    }
+  }
+
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: $text1;
+      font-size: 0.9rem;
+      color: #6c757d;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: #667eea;
+        cursor: pointer;
+      }
+    }
+
+    .forgot-password {
+      color: #667eea;
+      text-decoration: none;
+      font-family: $text1;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #5a6fd8;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .login-button {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-family: $text2;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  .submit-error {
+    background: #fdf2f2;
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: $text1;
+  }
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+
+  p {
+    font-family: $text1;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .register-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #667eea;
+    text-decoration: none;
+    font-family: $text2;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    svg {
+      font-size: 0.9rem;
+    }
+  }
 }
