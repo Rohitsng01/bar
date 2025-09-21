@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { FaUtensils, FaWineGlassAlt, FaHeart, FaStar, FaClock, FaUsers } from 'react-icons/fa'
-import heroImg1 from '../img/max-griss.jpg'
-import heroImg2 from '../img/chicken.jpg'
-import heroImg3 from '../img/burgerfried.jpg'
-import heroImg4 from '../img/menu-2.jpg'
+import heroImg1 from '../img/s1.jpg'
+import heroImg2 from '../img/s2.jpg'
+import heroImg3 from '../img/s3.jpg'
+import heroImg4 from '../img/s4.jpg'
+import heroImg5 from '../img/s5.jpg'
 
 const Home = () => {
   return (
@@ -58,6 +59,9 @@ const Home = () => {
               </div>
               <div className="carousel-item">
                 <img src={heroImg4} alt="Restaurant Atmosphere" />
+              </div>
+              <div className="carousel-item">
+                <img src={heroImg5} alt="Restaurant Atmosphere" />
               </div>
             </Carousel>
           </div>

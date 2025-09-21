@@ -3,7 +3,7 @@ import { FaUtensils, FaHeart, FaStar, FaUsers, FaAward, FaLeaf, FaWineGlassAlt, 
 import aboutImg1 from '../img/max-griss.jpg'
 import aboutImg2 from '../img/chicken.jpg'
 import aboutImg3 from '../img/burgerfried.jpg'
-import aboutImg4 from '../img/menu-2.jpg'
+import aboutImg4 from '../img/bg-hero.jpg'
 
 function About() {
   return (
