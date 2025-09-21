@@ -45,7 +45,7 @@ function Services() {
     {
       icon: <FaPhone />,
       title: "Phone",
-      details: "+91 7543936835",
+      details: "+91 1234567897",
       description: "Call us for reservations"
     },
     {

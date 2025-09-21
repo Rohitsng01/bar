@@ -231,7 +231,7 @@ function Help() {
                   <FaPhone />
                   <div>
                     <strong>Phone</strong>
-                    <p>+91 7543936835</p>
+                    <p>+91 123456789</p>
                   </div>
                 </div>
                 <div className="contact-item">

@@ -286,7 +286,7 @@ const Book = () => {
                   <FaPhone />
                   <div>
                     <strong>Contact</strong>
-                    <p>+91 7543936835<br />info@30degree.com</p>
+                    <p>+91 1234567867<br />info@30degree.com</p>
                   </div>
                 </div>
               </div>
