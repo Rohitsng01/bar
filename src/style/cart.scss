@@ -248,7 +248,8 @@
 
   @media (max-width: 768px) {
     grid-column: 2;
-    grid-row: 1;
+     grid-row: 2;  // 👈 move to second row
+    padding-top: 5px;  // give some spacing
     justify-self: end;
     align-self: start;
   }
